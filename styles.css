@@ -53,13 +53,15 @@ body {
     border-radius: 12px;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     border: none;
     font-size: 16px;
     text-align: center;
     font-family: inherit;
     line-height: 1.5;
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 .btn--primary {
@@ -72,10 +74,8 @@ body {
 }
 
 .btn--primary:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px) translateZ(0);
     box-shadow: 0 6px 20px rgba(247, 166, 32, 0.4);
-    background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .btn--large {
@@ -255,6 +255,7 @@ body {
 .pain-direct {
     padding: 100px 0;
     background: var(--bg-gray);
+    min-height: 600px;
 }
 
 .pain-direct__content {
@@ -269,6 +270,7 @@ body {
     color: var(--text-dark);
     margin-bottom: 50px;
     line-height: 1.3;
+    min-height: 50px;
 }
 
 .pain-direct__list {
@@ -277,6 +279,7 @@ body {
     gap: 24px;
     margin-bottom: 50px;
     text-align: left;
+    min-height: 400px;
 }
 
 .pain-direct__item {
@@ -287,11 +290,14 @@ body {
     background: var(--bg-card);
     border-radius: 12px;
     border-left: 4px solid var(--primary-color);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+    transform: translateZ(0);
+    min-height: 60px;
 }
 
 .pain-direct__item:hover {
-    transform: translateX(8px);
+    transform: translateX(8px) translateZ(0);
     box-shadow: var(--shadow-md);
 }
 
@@ -390,15 +396,16 @@ body {
     border-radius: 16px;
     background: var(--bg-dark);
     border: 2px solid var(--border-color);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 .platform__item:hover {
-    border-color: var(--primary-color);
-    transform: translateY(-6px);
+    transform: translateY(-6px) translateZ(0);
     box-shadow: 0 8px 20px rgba(247, 166, 32, 0.3);
-    background: var(--bg-card);
+    opacity: 0.95;
 }
 
 .platform__icon {
@@ -477,17 +484,20 @@ body {
     border-radius: 16px;
     padding: 32px 24px;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    will-change: transform;
+    transform: translateZ(0);
+    min-height: 180px;
 }
 
 .pain__card:hover {
-    border-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-4px);
+    transform: translateY(-4px) translateZ(0);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0.95;
 }
 
 .pain__card-icon {
@@ -648,18 +658,20 @@ body {
     border-radius: 16px;
     padding: 32px 24px;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    will-change: transform;
+    transform: translateZ(0);
+    min-height: 160px;
 }
 
 .solution__negative-card:hover {
-    border-color: var(--primary-color);
-    transform: translateY(-6px);
+    transform: translateY(-6px) translateZ(0);
     box-shadow: 0 8px 25px rgba(247, 166, 32, 0.2);
-    background: linear-gradient(135deg, rgba(247, 166, 32, 0.05), rgba(214, 137, 16, 0.02));
+    opacity: 0.95;
 }
 
 .solution__negative-icon {
@@ -767,13 +779,16 @@ body {
     padding: 40px;
     border-radius: 16px;
     border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    will-change: transform;
+    transform: translateZ(0);
+    min-height: 220px;
 }
 
 .service__card:hover {
-    border-color: var(--primary-color);
+    transform: translateY(-4px) translateZ(0);
     box-shadow: var(--shadow-lg);
-    transform: translateY(-4px);
+    opacity: 0.95;
 }
 
 .service__icon svg {
@@ -843,18 +858,20 @@ body {
     border-radius: 16px;
     padding: 32px 24px;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    will-change: transform;
+    transform: translateZ(0);
+    min-height: 160px;
 }
 
 .differentiator__card:hover {
-    border-color: var(--primary-color);
-    transform: translateY(-6px);
+    transform: translateY(-6px) translateZ(0);
     box-shadow: 0 8px 25px rgba(247, 166, 32, 0.2);
-    background: linear-gradient(135deg, rgba(247, 166, 32, 0.05), rgba(214, 137, 16, 0.02));
+    opacity: 0.95;
 }
 
 .differentiator__icon {
@@ -960,16 +977,19 @@ body {
     padding: 40px;
     border-radius: 16px;
     border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
     display: flex;
     flex-direction: column;
     height: 100%;
+    will-change: transform;
+    transform: translateZ(0);
+    min-height: 200px;
 }
 
 .case__card:hover {
+    transform: translateY(-8px) translateZ(0);
     box-shadow: var(--shadow-xl);
-    transform: translateY(-8px);
-    border-color: var(--primary-color);
+    opacity: 0.95;
 }
 
 .case__title {
@@ -1150,10 +1170,12 @@ body {
 .footer__links-group ul li a {
     color: var(--text-gray);
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     font-size: 15px;
     display: inline-block;
     position: relative;
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 .footer__links-group ul li a::before {
@@ -1169,7 +1191,8 @@ body {
 
 .footer__links-group ul li a:hover {
     color: var(--text-dark);
-    padding-left: 8px;
+    transform: translateX(8px) translateZ(0);
+    opacity: 0.9;
 }
 
 .footer__links-group ul li a:hover::before {
@@ -1242,13 +1265,15 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     line-height: 1;
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 .modal__close:hover {
-    background: var(--bg-gray);
-    color: var(--text-dark);
+    transform: scale(1.1) translateZ(0);
+    opacity: 0.8;
 }
 
 .modal__title {
