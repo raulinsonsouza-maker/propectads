@@ -540,14 +540,18 @@ body {
     opacity: 0.4;
     filter: blur(20px);
     animation: pulse-glow 3s ease-in-out infinite;
+    will-change: opacity, transform;
+    transform: translateZ(0);
 }
 
 @keyframes pulse-glow {
     0%, 100% {
         opacity: 0.3;
+        transform: scale(1);
     }
     50% {
         opacity: 0.5;
+        transform: scale(1.01);
     }
 }
 
@@ -1840,14 +1844,16 @@ body {
     justify-content: center;
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
     z-index: 999;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
     text-decoration: none;
     color: white;
     animation: pulse 2s infinite;
+    will-change: transform, opacity;
+    transform: translateZ(0);
 }
 
 .whatsapp-float:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) translateZ(0);
     box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
     background: #20BA5A;
 }
@@ -1859,10 +1865,12 @@ body {
 
 @keyframes pulse {
     0%, 100% {
-        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        opacity: 1;
+        transform: scale(1) translateZ(0);
     }
     50% {
-        box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6);
+        opacity: 0.95;
+        transform: scale(1.02) translateZ(0);
     }
 }
 
@@ -1880,45 +1888,6 @@ body {
 
 .fade-in-up {
     animation: fadeInUp 0.6s ease-out;
-}
-
-/* WhatsApp Floating Button */
-.whatsapp-float {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    width: 64px;
-    height: 64px;
-    background: #25D366;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-    z-index: 999;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    color: white;
-    animation: pulse 2s infinite;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
-    background: #20BA5A;
-}
-
-.whatsapp-float svg {
-    width: 32px;
-    height: 32px;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-    }
-    50% {
-        box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6);
-    }
+    will-change: transform, opacity;
 }
 
