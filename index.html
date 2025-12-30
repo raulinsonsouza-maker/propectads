@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ProspectAds - Estrutura digital profissional para gerar clientes de forma consistente. Criamos estruturas digitais completas para seu negócio.">
+    <title>ProspectAds - Gere Mais Clientes com Estrutura Digital Profissional</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18' stroke='%23FFB800' stroke-width='3.5' fill='none'/%3E%3Cpath d='M 20 12 L 20 28 M 20 12 L 14 18 M 20 12 L 26 18' stroke='%23FFB800' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18' stroke='%23FFB800' stroke-width='3.5' fill='none'/%3E%3Cpath d='M 20 12 L 20 28 M 20 12 L 14 18 M 20 12 L 26 18' stroke='%23FFB800' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+                    <svg class="logo__icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="#FFB800" stroke-width="3.5" fill="none"/>
+                        <path d="M 20 12 L 20 28 M 20 12 L 14 18 M 20 12 L 26 18" stroke="#FFB800" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="logo__text">ProspectAds</span>
+                </a>
+            </div>
+            <ul class="nav__menu" id="nav-menu">
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato" class="btn btn--primary btn--header">Falar com Especialista</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    Seu negócio não gera <span class="hero__highlight">clientes de forma previsível</span>.<br>
+                    Nós criamos a <span class="hero__highlight">estrutura</span> que resolve isso.
+                </h1>
+                <p class="hero__description">
+                    <span class="hero__highlight">Estrutura digital completa</span> para gerar clientes todos os dias.
+                </p>
+                <div class="hero__cta">
+                    <a href="#contato" class="btn btn--large btn--primary">Montar minha estrutura de clientes</a>
+                    <p class="hero__microcopy">Atendimento humano. Avaliação rápida. Sem compromisso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Dor Direta -->
+    <section class="pain-direct">
+        <div class="container">
+            <div class="pain-direct__content">
+                <h2 class="pain-direct__title">
+                    Você está aqui porque seu negócio não gera clientes de forma previsível.
+                </h2>
+                <div class="pain-direct__list">
+                    <div class="pain-direct__item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                        </svg>
+                        <p>Você sente que está sempre começando do zero.</p>
+                    </div>
+                    <div class="pain-direct__item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                        </svg>
+                        <p>Você depende de sorte, indicações ou ações isoladas que não se repetem.</p>
+                    </div>
+                    <div class="pain-direct__item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                        </svg>
+                        <p>Você não sabe quando vai ter o próximo cliente. Não há previsibilidade.</p>
+                    </div>
+                    <div class="pain-direct__item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                        </svg>
+                        <p>Você perde oportunidades porque não tem estrutura para capturar e organizar leads.</p>
+                    </div>
+                    <div class="pain-direct__item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                        </svg>
+                        <p>Você testa coisas sozinho, gasta dinheiro sem resultado e não sabe o que funciona.</p>
+                    </div>
+                </div>
+                <p class="pain-direct__promise">
+                    Isso acaba hoje.
+                </p>
+                <p class="pain-direct__action">
+                    A partir de agora, seu negócio passa a ter estrutura.
+                </p>
+                <div class="pain-direct__cta">
+                    <a href="#contato" class="btn btn--large btn--primary">Montar minha estrutura de clientes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Plataformas -->
+    <section class="platforms">
+        <div class="container">
+            <h2 class="platforms__title">A plataforma não importa. A estrutura sim.</h2>
+            <p class="platforms__subtitle">
+                Nós estruturamos onde seu cliente está.
+            </p>
+            <div class="platforms__grid">
+                <div class="platform__item">
+                    <div class="platform__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                        </svg>
+                    </div>
+                    <h3 class="platform__name">Google Ads</h3>
+                </div>
+                <div class="platform__item">
+                    <div class="platform__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="#1877F2"/>
+                            <path d="M16.671 15.543l.532-3.47h-3.328V9.823c0-.949.465-1.874 1.956-1.874h1.513V4.996s-1.374-.235-2.686-.235c-2.741 0-4.533 1.662-4.533 4.669v2.25H7.078v3.47h3.047v8.385a12.184 12.184 0 003.75 0v-8.385h2.796z" fill="#FFFFFF"/>
+                        </svg>
+                    </div>
+                    <h3 class="platform__name">Meta Ads</h3>
+                </div>
+                <div class="platform__item">
+                    <div class="platform__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="#0A66C2"/>
+                        </svg>
+                    </div>
+                    <h3 class="platform__name">LinkedIn Ads</h3>
+                </div>
+                <div class="platform__item">
+                    <div class="platform__icon platform__icon--tiktok">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" fill="#FFFFFF"/>
+                        </svg>
+                    </div>
+                    <h3 class="platform__name">TikTok Ads</h3>
+                </div>
+                <div class="platform__item">
+                    <div class="platform__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FF0000"/>
+                        </svg>
+                    </div>
+                    <h3 class="platform__name">YouTube Ads</h3>
+                </div>
+                <div class="platform__item">
+                    <div class="platform__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="6" cy="6" r="1.5" fill="currentColor"/>
+                            <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
+                            <circle cx="6" cy="18" r="1.5" fill="currentColor"/>
+                            <circle cx="18" cy="18" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="platform__name">Outras Plataformas</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção da Dor -->
+    <section class="pain">
+        <div class="container">
+            <h2 class="pain__title">Se sua empresa não gera clientes todos os dias, existe um problema.</h2>
+            <div class="pain__content">
+                <div class="pain__negatives">
+                    <div class="pain__card">
+                        <div class="pain__card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12" r="2" fill="currentColor" opacity="0.3"/>
+                                <path d="M6 9l6 3M6 15l6 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <p class="pain__card-text">Não é o seu produto.</p>
+                    </div>
+                    <div class="pain__card">
+                        <div class="pain__card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 7h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v3H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 7V4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 11v6M9 14h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <p class="pain__card-text">Não é o seu serviço.</p>
+                    </div>
+                    <div class="pain__card">
+                        <div class="pain__card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                                <path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                            </svg>
+                        </div>
+                        <p class="pain__card-text">Não é falta de esforço.</p>
+                    </div>
+                </div>
+                <div class="pain__main-card">
+                    <div class="pain__main-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 22V12h6v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 2v6M6 8h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+                            <circle cx="12" cy="5" r="1.5" fill="currentColor" opacity="0.4"/>
+                        </svg>
+                    </div>
+                    <p class="pain__main">
+                        O problema é não ter uma estrutura clara e profissional para atrair, converter e organizar clientes.
+                    </p>
+                </div>
+                <p class="pain__conclusion">
+                    Sem estrutura, o crescimento depende de sorte, indicação ou tentativas isoladas. Isso gera picos, quedas e zero previsibilidade de receita.
+                </p>
+                <div class="pain__cta">
+                    <a href="#contato" class="btn btn--large btn--primary">Montar minha estrutura de clientes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Solução -->
+    <section class="solution">
+        <div class="container">
+            <h2 class="section__title">O que a ProspectAds faz</h2>
+            <div class="solution__content">
+                <div class="solution__negatives">
+                    <div class="solution__negative-card">
+                        <div class="solution__negative-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <p class="solution__negative-text">Você não precisa aprender tráfego, funil ou automação.</p>
+                    </div>
+                    <div class="solution__negative-card">
+                        <div class="solution__negative-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <p class="solution__negative-text">Você não precisa testar sozinho.</p>
+                    </div>
+                    <div class="solution__negative-card">
+                        <div class="solution__negative-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="17 8 12 3 7 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="12" y1="3" x2="12" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <p class="solution__negative-text">Você não precisa perder leads.</p>
+                    </div>
+                </div>
+                <div class="solution__highlight-card">
+                    <div class="solution__highlight-icon">
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p class="solution__highlight">
+                        Nós assumimos toda a estrutura de geração de clientes.
+                    </p>
+                    <p class="solution__scope">
+                        Do planejamento à implementação completa.
+                    </p>
+                </div>
+                <div class="solution__cta">
+                    <a href="#contato" class="btn btn--large btn--primary">Montar minha estrutura de clientes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Serviços -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <h2 class="section__title">A estrutura completa para gerar clientes</h2>
+            <p class="section__subtitle">Cada elemento abaixo existe para cumprir uma única função: gerar clientes.</p>
+            <div class="services__grid">
+                <div class="service__card">
+                    <div class="service__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service__title">Tráfego Pago</h3>
+                    <p class="service__description">
+                        Pessoas certas chegando todos os dias.
+                    </p>
+                </div>
+                <div class="service__card">
+                    <div class="service__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service__title">Landing Pages</h3>
+                    <p class="service__description">
+                        Visitantes viram contatos prontos para vender.
+                    </p>
+                </div>
+                <div class="service__card">
+                    <div class="service__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service__title">Criativos</h3>
+                    <p class="service__description">
+                        Mensagens diretas, focadas em gerar ação, não engajamento vazio.
+                    </p>
+                </div>
+                <div class="service__card">
+                    <div class="service__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service__title">CRM & Automação</h3>
+                    <p class="service__description">
+                        Nenhum lead perdido. Nenhuma oportunidade esquecida.
+                    </p>
+                </div>
+                <div class="service__card">
+                    <div class="service__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service__title">Dashboards</h3>
+                    <p class="service__description">
+                        Você sabe exatamente o que está gerando clientes e o que não está.
+                    </p>
+                </div>
+            </div>
+            <div class="services__cta">
+                <p class="services__cta-text">Essa é a estrutura completa. Tudo isso para gerar clientes todos os dias.</p>
+                <a href="#contato" class="btn btn--large btn--primary">Montar minha estrutura</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Diferencial -->
+    <section class="differentiator">
+        <div class="container">
+            <h2 class="section__title">Aqui não existe improviso</h2>
+            <div class="differentiator__content">
+                <div class="differentiator__grid">
+                    <div class="differentiator__card">
+                        <div class="differentiator__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="differentiator__card-title">Estrutura profissional</h3>
+                        <p class="differentiator__card-text">Desde o primeiro dia</p>
+                    </div>
+                    <div class="differentiator__card">
+                        <div class="differentiator__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="differentiator__card-title">Foco total</h3>
+                        <p class="differentiator__card-text">Em geração de clientes</p>
+                    </div>
+                    <div class="differentiator__card">
+                        <div class="differentiator__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="22 4 12 14.01 9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="differentiator__card-title">Execução clara</h3>
+                        <p class="differentiator__card-text">Sem promessas vazias</p>
+                    </div>
+                    <div class="differentiator__card">
+                        <div class="differentiator__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 10h.01M12 10h.01M16 10h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="differentiator__card-title">Comunicação direta</h3>
+                        <p class="differentiator__card-text">Acompanhamento constante</p>
+                    </div>
+                </div>
+                <div class="differentiator__highlight">
+                    <p class="differentiator__closing">
+                        Aqui não existe improviso.<br>
+                        Existe processo, estrutura e acompanhamento contínuo.
+                    </p>
+                </div>
+                <div class="differentiator__cta">
+                    <a href="#contato" class="btn btn--large btn--primary">Montar minha estrutura de clientes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section class="cases" id="cases">
+        <div class="container">
+            <h2 class="section__title">Empresas que passaram a receber contatos qualificados de forma previsível</h2>
+            <p class="cases__intro">
+                Após a estruturação digital: mais previsibilidade, mais controle, menos improviso.
+            </p>
+            <div class="cases__grid">
+                <div class="case__card">
+                    <h3 class="case__title">Clínicas de Bio Medicina</h3>
+                    <p class="case__description">
+                        Agora chegam contatos de forma previsível, interessados e conscientes do serviço. 
+                        Pacientes que já sabem o que querem e estão prontos para agendar.
+                    </p>
+                </div>
+                <div class="case__card">
+                    <h3 class="case__title">Empresas de Fotovoltaico</h3>
+                    <p class="case__description">
+                        Contatos qualificados chegam de forma constante, interessados em energia solar. 
+                        Fim da dependência de indicações e porta a porta. Agora é previsível e escalável.
+                    </p>
+                </div>
+                <div class="case__card">
+                    <h3 class="case__title">Empresas de Seguro</h3>
+                    <p class="case__description">
+                        Fluxo constante de clientes interessados, que já entendem o valor do serviço. 
+                        Fim da dependência de corretorias e vendas casuais. Agora é previsível e sustentável.
+                    </p>
+                </div>
+            </div>
+            <div class="cases__cta">
+                <p class="cases__cta-text">Seu negócio pode ser o próximo case de sucesso.</p>
+                <a href="#contato" class="btn btn--large btn--primary">Montar minha estrutura</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <div class="contact__content">
+                <h2 class="section__title">Quer parar de depender de sorte para gerar clientes?</h2>
+                <p class="contact__description">
+                    Fale diretamente com um especialista da ProspectAds pelo WhatsApp.
+                    Em poucos minutos, você entende se faz sentido para seu negócio.
+                    <br><br>
+                    Sem apresentação engessada. Sem compromisso.
+                </p>
+                <div class="contact__cta">
+                    <a href="https://wa.me/5519982459427?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20como%20a%20ProspectAds%20pode%20ajudar%20minha%20empresa%20a%20gerar%20mais%20clientes." 
+                       class="btn btn--large btn--primary btn--whatsapp" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="currentColor"/>
+                        </svg>
+                        Falar no WhatsApp
+                    </a>
+                    <p class="contact__microcopy">
+                        Atendimento humano. Sem robôs. Sem spam. Resposta rápida.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <svg class="footer__logo-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="18" stroke="#FFB800" stroke-width="3.5" fill="none"/>
+                            <path d="M 20 12 L 20 28 M 20 12 L 14 18 M 20 12 L 26 18" stroke="#FFB800" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h3 class="footer__brand-name">ProspectAds</h3>
+                    </div>
+                    <p class="footer__tagline">Estrutura digital para geração de clientes</p>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__links-group">
+                        <h4 class="footer__links-title">Institucional</h4>
+                        <ul>
+                            <li><a href="#" class="modal-trigger" data-modal="privacy">Política de Privacidade</a></li>
+                            <li><a href="#" class="modal-trigger" data-modal="terms">Termos de Uso</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 ProspectAds. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="modal-privacy">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Fechar">&times;</button>
+            <h2 class="modal__title">Política de Privacidade</h2>
+            <div class="modal__body">
+                <p><strong>Última atualização:</strong> Janeiro de 2025</p>
+                
+                <h3>1. Informações que Coletamos</h3>
+                <p>A ProspectAds coleta informações que você nos fornece diretamente, incluindo:</p>
+                <ul>
+                    <li>Nome completo</li>
+                    <li>Endereço de e-mail</li>
+                    <li>Número de telefone/WhatsApp</li>
+                    <li>Nome da empresa</li>
+                    <li>Informações sobre seu negócio e objetivos</li>
+                </ul>
+
+                <h3>2. Como Usamos suas Informações</h3>
+                <p>Utilizamos as informações coletadas para:</p>
+                <ul>
+                    <li>Entrar em contato e responder suas solicitações</li>
+                    <li>Apresentar propostas e soluções personalizadas</li>
+                    <li>Melhorar nossos serviços e comunicação</li>
+                    <li>Enviar informações relevantes sobre nossos serviços (com seu consentimento)</li>
+                </ul>
+
+                <h3>3. Proteção dos Dados</h3>
+                <p>Implementamos medidas de segurança técnicas e organizacionais para proteger suas informações pessoais contra acesso não autorizado, alteração, divulgação ou destruição.</p>
+
+                <h3>4. Compartilhamento de Informações</h3>
+                <p>Não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros, exceto quando necessário para fornecer nossos serviços ou quando exigido por lei.</p>
+
+                <h3>5. Seus Direitos</h3>
+                <p>Você tem o direito de:</p>
+                <ul>
+                    <li>Acessar suas informações pessoais</li>
+                    <li>Corrigir informações incorretas</li>
+                    <li>Solicitar a exclusão de seus dados</li>
+                    <li>Opor-se ao processamento de suas informações</li>
+                </ul>
+
+                <h3>6. Contato</h3>
+                <p>Para questões sobre esta Política de Privacidade, entre em contato conosco através do WhatsApp ou e-mail.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-terms">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Fechar">&times;</button>
+            <h2 class="modal__title">Termos de Uso</h2>
+            <div class="modal__body">
+                <p><strong>Última atualização:</strong> Janeiro de 2025</p>
+                
+                <h3>1. Aceitação dos Termos</h3>
+                <p>Ao acessar e usar este site, você concorda em cumprir e estar vinculado aos seguintes termos e condições de uso.</p>
+
+                <h3>2. Uso do Site</h3>
+                <p>Você concorda em usar este site apenas para fins legais e de maneira que não infrinja os direitos de terceiros ou restrinja ou iniba o uso e aproveitamento do site por terceiros.</p>
+
+                <h3>3. Propriedade Intelectual</h3>
+                <p>Todo o conteúdo deste site, incluindo textos, gráficos, logos, ícones, imagens e software, é propriedade da ProspectAds ou de seus fornecedores de conteúdo e está protegido por leis de direitos autorais.</p>
+
+                <h3>4. Limitação de Responsabilidade</h3>
+                <p>A ProspectAds não se responsabiliza por quaisquer danos diretos, indiretos, incidentais ou consequenciais resultantes do uso ou incapacidade de usar este site.</p>
+
+                <h3>5. Modificações</h3>
+                <p>Reservamo-nos o direito de modificar estes termos a qualquer momento. As alterações entrarão em vigor imediatamente após sua publicação no site.</p>
+
+                <h3>6. Lei Aplicável</h3>
+                <p>Estes termos são regidos pelas leis do Brasil. Qualquer disputa relacionada a estes termos será resolvida nos tribunais competentes do Brasil.</p>
+
+                <h3>7. Contato</h3>
+                <p>Para questões sobre estes Termos de Uso, entre em contato conosco através do WhatsApp ou e-mail.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5519982459427?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20como%20a%20ProspectAds%20pode%20ajudar%20minha%20empresa%20a%20gerar%20mais%20clientes." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Falar no WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="currentColor"/>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
