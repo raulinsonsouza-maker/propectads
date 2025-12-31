@@ -1,0 +1,23 @@
+<svg width="280" height="60" viewBox="0 0 280 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Círculo do logo -->
+    <circle cx="30" cy="30" r="24" stroke="#FFB800" stroke-width="4" fill="none"/>
+    
+    <!-- Seta apontando para cima -->
+    <path d="M 30 16 L 30 44 M 30 16 L 18 26 M 30 16 L 42 26" 
+          stroke="#FFB800" 
+          stroke-width="4" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    
+    <!-- Texto ProspectAds -->
+    <text x="68" y="40" 
+          font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+          font-size="26" 
+          font-weight="700" 
+          fill="#FFFFFF" 
+          letter-spacing="-0.5px"
+          dominant-baseline="middle">
+        ProspectAds
+    </text>
+</svg>
+

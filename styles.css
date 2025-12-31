@@ -2545,7 +2545,7 @@ body {
 
 .how-it-works__steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
     max-width: 1000px;
     margin: 0 auto;
@@ -2644,7 +2644,7 @@ body {
     line-height: 1.6;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .how-it-works__steps {
         grid-template-columns: 1fr;
         gap: 24px;
