@@ -7,10 +7,10 @@ const WHATSAPP_CONFIG = {
     // Mensagens pré-formatadas para cada tipo de CTA
     messages: {
         hero: 'Olá! Gostaria de agendar minha avaliação gratuita.',
-        benefits: 'Olá! Quero viver essa experiência e saber mais sobre os resultados.',
-        evaluation: 'Olá! Gostaria de agendar minha avaliação gratuita e entender a causa raiz dos meus sintomas.',
-        final: 'Olá! Me identifiquei com o método e gostaria de falar com vocês.',
-        float: 'Olá! Gostaria de saber mais sobre o atendimento em Medicina Bioenergética.'
+        benefits: 'Olá! Gostaria de agendar minha avaliação gratuita.',
+        evaluation: 'Olá! Gostaria de agendar minha avaliação gratuita.',
+        final: 'Olá! Gostaria de agendar minha avaliação gratuita.',
+        float: 'Olá! Gostaria de agendar minha avaliação gratuita.'
     }
 };
 
