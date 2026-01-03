@@ -6,11 +6,11 @@ const WHATSAPP_CONFIG = {
     
     // Mensagens pré-formatadas para cada tipo de CTA
     messages: {
-        hero: 'Olá! Vi a página da Clínica Letícia Galloni e gostaria de agendar minha avaliação gratuita. Descobri a causa emocional dos meus sintomas e bloqueios e quero entender o que meu corpo ainda está guardando.',
-        benefits: 'Olá! Vi a página da Clínica Letícia Galloni e quero viver essa experiência. Gostaria de saber mais sobre os resultados e como a Medicina Bioenergética pode me ajudar.',
-        evaluation: 'Olá! Vi a página da Clínica Letícia Galloni e gostaria de agendar minha avaliação gratuita de 1h30. Quero entender a causa raiz dos meus sintomas e conhecer o método.',
-        final: 'Olá! Vi a página da Clínica Letícia Galloni e me identifiquei muito com o método de Medicina Bioenergética. Meu corpo está pedindo escuta e gostaria de falar com vocês.',
-        float: 'Olá! Vi a página da Clínica Letícia Galloni e gostaria de saber mais sobre o atendimento em Medicina Bioenergética. Quero entender como posso iniciar meu processo de cura.'
+        hero: 'Olá! Gostaria de agendar minha avaliação gratuita.',
+        benefits: 'Olá! Quero viver essa experiência e saber mais sobre os resultados.',
+        evaluation: 'Olá! Gostaria de agendar minha avaliação gratuita e entender a causa raiz dos meus sintomas.',
+        final: 'Olá! Me identifiquei com o método e gostaria de falar com vocês.',
+        float: 'Olá! Gostaria de saber mais sobre o atendimento em Medicina Bioenergética.'
     }
 };
 
