@@ -10,7 +10,7 @@
     --primary-color: #9d7a5a;        /* Marrom terroso mais vibrante */
     --secondary-color: #b8956f;       /* Marrom bege quente e vivo */
     --accent-color: #c9a882;          /* Bege acinzentado mais claro */
-    --text-dark: #2d2418;             /* Marrom escuro mais contrastante */
+    --text-dark: #3d2e1f;             /* Marrom escuro harmonioso com a paleta */
     --text-light: #6b5d4f;            /* Marrom médio */
     --bg-light: #f8f5f0;              /* Bege muito claro/quente mais vivo */
     --bg-white: #ffffff;              /* Branco puro */
@@ -98,10 +98,34 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(180deg, var(--bg-white) 0%, var(--bg-light) 100%);
+    background-image: url('images/maca.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     padding: 100px 20px;
     position: relative;
     overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.75);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero .container,
+.hero .hero-content-wrapper,
+.hero .hero-content,
+.hero .hero-image {
+    position: relative;
+    z-index: 2;
 }
 
 @media (min-width: 1200px) {
@@ -120,17 +144,19 @@ body {
     background: radial-gradient(circle, rgba(157, 122, 90, 0.08) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
+    z-index: 1;
 }
 
 .hero-content-wrapper {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 60px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
+    gap: 0;
 }
 
 @media (min-width: 1200px) {
@@ -140,7 +166,9 @@ body {
 }
 
 .hero-content {
-    text-align: left;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .hero-headline {
@@ -150,6 +178,7 @@ body {
     margin-bottom: 25px;
     line-height: 1.15;
     letter-spacing: -0.8px;
+    text-align: center;
 }
 
 @media (min-width: 1200px) {
@@ -165,6 +194,7 @@ body {
     color: var(--text-light);
     margin-bottom: 25px;
     line-height: 1.7;
+    text-align: center;
 }
 
 .hero-problem {
@@ -197,9 +227,10 @@ body {
 .hero-cta-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 15px;
     margin-top: 35px;
+    width: 100%;
 }
 
 .hero-cta-wrapper .cta-button {
@@ -210,7 +241,7 @@ body {
     font-size: 15px;
     color: var(--text-light);
     margin-top: 0;
-    text-align: left;
+    text-align: center;
     font-weight: 500;
     letter-spacing: 0.3px;
 }
@@ -288,7 +319,7 @@ body {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin: 30px 0;
+    margin: 30px auto;
     border: none;
     cursor: pointer;
     box-shadow: 0 8px 30px rgba(230, 165, 0, 0.5);
@@ -357,7 +388,7 @@ section {
 
 @media (min-width: 1200px) {
     section {
-        padding: 90px 20px;
+        padding: 100px 20px;
     }
 }
 
@@ -587,6 +618,7 @@ section:first-child::before {
     margin-left: auto;
     margin-right: auto;
     font-weight: 500;
+    text-align: center;
 }
 
 .turnaround-text strong {
