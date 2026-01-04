@@ -1791,16 +1791,16 @@ body {
     }
 
     .logo__icon {
-        width: 32px;
-        height: 32px;
+        width: 30px;
+        height: 30px;
     }
 
     .logo__text {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .nav__menu {
-        gap: 0;
+        gap: 12px;
     }
 
     .nav__menu li:first-child {
@@ -1808,9 +1808,9 @@ body {
     }
 
     .nav__menu a.btn--header {
-        padding: 10px 20px;
-        font-size: 13px;
-        border-radius: 12px;
+        padding: 9px 16px;
+        font-size: 12px;
+        border-radius: 10px;
         white-space: nowrap;
     }
 
@@ -1931,6 +1931,43 @@ body {
 }
 
 @media (max-width: 640px) {
+    .header {
+        background: rgba(26, 26, 26, 0.98);
+        backdrop-filter: blur(15px);
+    }
+
+    .nav {
+        padding: 10px 15px;
+    }
+
+    .nav__logo a {
+        gap: 6px;
+    }
+
+    .logo__icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .logo__text {
+        font-size: 14px;
+    }
+
+    .nav__menu {
+        gap: 8px;
+    }
+
+    .nav__menu li:first-child {
+        display: none;
+    }
+
+    .nav__menu a.btn--header {
+        padding: 8px 14px;
+        font-size: 11px;
+        border-radius: 10px;
+        white-space: nowrap;
+    }
+
     .hero {
         padding: 120px 0 80px;
         min-height: auto;
@@ -2384,29 +2421,6 @@ body {
         font-size: 16px;
         margin-top: 24px;
         margin-bottom: 10px;
-    }
-
-    .nav {
-        padding: 10px 15px;
-    }
-
-    .nav__logo a {
-        gap: 8px;
-    }
-
-    .logo__icon {
-        width: 28px;
-        height: 28px;
-    }
-
-    .logo__text {
-        font-size: 16px;
-    }
-
-    .nav__menu a.btn--header {
-        padding: 10px 18px;
-        font-size: 12px;
-        border-radius: 12px;
     }
 
     .footer {
