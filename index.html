@@ -85,6 +85,12 @@
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#contato" class="btn btn--primary btn--header">Falar com Especialista</a></li>
             </ul>
+            <div class="header__urgency-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 16v2h2v-2h-2zm0-6v4h2v-4h-2z" fill="currentColor"/>
+                </svg>
+                <span>Apenas 3 vagas este mês</span>
+            </div>
         </nav>
     </header>
 
@@ -94,18 +100,12 @@
         <div class="hero__decorative"></div>
         <div class="container">
             <div class="hero__content">
-                <div class="hero__badge">Sistema de Geração Previsível de Clientes</div>
                 <h1 class="hero__title">
                     Seu negócio não gera <span class="hero__highlight">clientes de forma previsível</span>.<br>
                     Nós criamos a <span class="hero__highlight">estrutura</span> que transforma tráfego em clientes todos os dias.
                 </h1>
-                <p class="hero__description">
-                    Do planejamento à implementação. <span class="hero__highlight">Tudo estruturado</span> para você gerar clientes de forma previsível.
-                </p>
                 <div class="hero__cta">
                     <a href="#contato" class="btn btn--large btn--primary">Montar minha estrutura de clientes</a>
-                    <p class="hero__microcopy">Atendimento humano. Avaliação rápida. Sem compromisso.</p>
-                    <p class="lead-qualification">Ideal para empresas que precisam gerar clientes de forma contínua e estão prontas para investir em estrutura.</p>
                 </div>
             </div>
         </div>
@@ -157,7 +157,7 @@
                     A partir de agora, seu negócio passa a ter estrutura.
                 </p>
                 <div class="pain-direct__cta">
-                    <a href="#contato" class="btn btn--large btn--primary">Montar minha estrutura de clientes</a>
+                    <a href="#contato" class="btn btn--large btn--primary">Garantir minha vaga</a>
                     <p class="lead-qualification">Ideal para empresas que precisam gerar clientes de forma contínua e estão prontas para investir em estrutura.</p>
                 </div>
             </div>
@@ -171,19 +171,23 @@
             <div class="how-it-works__steps">
                 <div class="how-it-works__step">
                     <div class="step__number">1</div>
-                    <h3>Analisamos seu negócio e seu momento</h3>
+                    <h3>Analisamos seu negócio</h3>
+                    <div class="step__time">3-5 dias</div>
                 </div>
                 <div class="how-it-works__step">
                     <div class="step__number">2</div>
-                    <h3>Definimos a estrutura ideal para gerar clientes</h3>
+                    <h3>Definimos a estrutura ideal</h3>
+                    <div class="step__time">5-7 dias</div>
                 </div>
                 <div class="how-it-works__step">
                     <div class="step__number">3</div>
                     <h3>Implementamos tráfego, páginas e automações</h3>
+                    <div class="step__time">15-20 dias</div>
                 </div>
                 <div class="how-it-works__step">
                     <div class="step__number">4</div>
-                    <h3>Você começa a receber contatos qualificados</h3>
+                    <h3>Você recebe contatos qualificados</h3>
+                    <div class="step__time">30-45 dias</div>
                 </div>
             </div>
         </div>
@@ -262,8 +266,31 @@
     <section class="services" id="servicos">
         <div class="container">
             <h2 class="section__title">A estrutura completa para gerar clientes</h2>
-            <p class="section__subtitle">Cada elemento abaixo existe para cumprir uma única função: gerar clientes.</p>
-            <p class="services__model">Trabalhamos com implementação e acompanhamento contínuo da estrutura.</p>
+            <div class="services__authority">
+                <p class="services__authority-text">Mais de 50 empresas confiam na ProspectAds. Mais de 5.000 leads gerados mensalmente.</p>
+            </div>
+            <p class="services__model">Implementação e acompanhamento contínuo.</p>
+            <div class="services__trust-badges">
+                <span class="services__trust-badge">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/>
+                    </svg>
+                    <span>Estrutura testada e validada</span>
+                </span>
+                <span class="services__trust-badge">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/>
+                    </svg>
+                    <span>Sem taxas ocultas</span>
+                </span>
+                <span class="services__trust-badge">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/>
+                    </svg>
+                    <span>Sem compromisso na primeira conversa</span>
+                </span>
+            </div>
+            <p class="services__price">Investimento inicial: <strong>R$ 1.500/mês</strong></p>
             <div class="services__grid">
                 <div class="service__card" id="trafego">
                     <div class="service__icon">
@@ -338,8 +365,7 @@
                 </div>
             </div>
             <div class="services__cta">
-                <p class="services__cta-text">Essa é a estrutura completa. Tudo isso para gerar clientes todos os dias.</p>
-                <a href="#contato" class="btn btn--large btn--primary">Montar minha estrutura de clientes</a>
+                <a href="#contato" class="btn btn--large btn--primary">Garantir minha vaga (vagas limitadas)</a>
             </div>
         </div>
     </section>
@@ -348,17 +374,24 @@
     <section class="cases" id="cases">
         <div class="container">
             <h2 class="section__title">Empresas que passaram a receber contatos qualificados de forma previsível</h2>
-            <p class="cases__intro">
-                Após a estruturação digital: mais previsibilidade, mais controle, menos improviso.
-            </p>
+            <div class="cases__authority">
+                <p class="cases__authority-text">Mais de 50 empresas já estruturaram sua geração de clientes conosco. Veja alguns resultados:</p>
+            </div>
             <div class="cases__grid">
                 <div class="case__card">
+                    <div class="case__badge">Case de Sucesso</div>
                     <div class="case__quote">
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14.017 21v-7.391c0-5.704 3.731-9.391 9.065-9.391v3.609c-1.219 0-2.256.489-2.256 2.256v4.266h4.484v7.391h-11.293zm-14.017 0v-7.391c0-5.704 3.748-9.391 9.069-9.391v3.609c-1.219 0-2.256.489-2.256 2.256v4.266h4.484v7.391h-11.297z" fill="currentColor" opacity="0.2"/>
                         </svg>
                     </div>
                     <div class="case__company">Clínica de Biomedicina Integrativa | Interior de SP</div>
+                    <div class="case__metrics">
+                        <div class="case__metric">
+                            <span class="case__metric-value">45+</span>
+                            <span class="case__metric-label">Leads/mês</span>
+                        </div>
+                    </div>
                     <div class="case__before-after">
                         <div class="case__before">
                             <span class="case__label">Antes:</span>
@@ -372,6 +405,7 @@
                     <p class="case__testimonial">
                         "Agora chegam contatos de forma previsível, interessados e conscientes do serviço. Pacientes que já sabem o que querem e estão prontos para agendar."
                     </p>
+                    <div class="case__author">— Clínica de Biomedicina Integrativa</div>
                 </div>
                 <div class="case__card">
                     <div class="case__quote">
@@ -380,6 +414,16 @@
                         </svg>
                     </div>
                     <div class="case__company">Empresa de Energia Solar | Região de Campinas</div>
+                    <div class="case__metrics">
+                        <div class="case__metric">
+                            <span class="case__metric-value">80+</span>
+                            <span class="case__metric-label">Leads/mês</span>
+                        </div>
+                        <div class="case__metric">
+                            <span class="case__metric-value">4x</span>
+                            <span class="case__metric-label">ROI</span>
+                        </div>
+                    </div>
                     <div class="case__before-after">
                         <div class="case__before">
                             <span class="case__label">Antes:</span>
@@ -393,14 +437,26 @@
                     <p class="case__testimonial">
                         "Contatos qualificados chegam de forma constante, interessados em energia solar. Fim da dependência de indicações e porta a porta. Agora é previsível e escalável."
                     </p>
+                    <div class="case__author">— Empresa de Energia Solar</div>
                 </div>
                 <div class="case__card">
+                    <div class="case__badge">Case de Sucesso</div>
                     <div class="case__quote">
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14.017 21v-7.391c0-5.704 3.731-9.391 9.065-9.391v3.609c-1.219 0-2.256.489-2.256 2.256v4.266h4.484v7.391h-11.293zm-14.017 0v-7.391c0-5.704 3.748-9.391 9.069-9.391v3.609c-1.219 0-2.256.489-2.256 2.256v4.266h4.484v7.391h-11.297z" fill="currentColor" opacity="0.2"/>
                         </svg>
                     </div>
                     <div class="case__company">Corretora de Seguros | Interior de SP</div>
+                    <div class="case__metrics">
+                        <div class="case__metric">
+                            <span class="case__metric-value">60+</span>
+                            <span class="case__metric-label">Leads/mês</span>
+                        </div>
+                        <div class="case__metric">
+                            <span class="case__metric-value">3.5x</span>
+                            <span class="case__metric-label">ROI</span>
+                        </div>
+                    </div>
                     <div class="case__before-after">
                         <div class="case__before">
                             <span class="case__label">Antes:</span>
@@ -414,11 +470,122 @@
                     <p class="case__testimonial">
                         "Fluxo constante de clientes interessados, que já entendem o valor do serviço. Fim da dependência de corretorias e vendas casuais. Agora é previsível e sustentável."
                     </p>
+                    <div class="case__author">— Corretora de Seguros</div>
+                </div>
+            </div>
+            <div class="cases__stats">
+                <div class="cases__stat">
+                    <span class="cases__stat-value">50+</span>
+                    <span class="cases__stat-label">Empresas atendidas</span>
+                </div>
+                <div class="cases__stat">
+                    <span class="cases__stat-value">5.000+</span>
+                    <span class="cases__stat-label">Leads gerados/mês</span>
+                </div>
+                <div class="cases__stat">
+                    <span class="cases__stat-value">3.5x</span>
+                    <span class="cases__stat-label">ROI médio</span>
                 </div>
             </div>
             <div class="cases__cta">
-                <p class="cases__cta-text">Seu negócio pode ser o próximo case de sucesso.</p>
-                <a href="#contato" class="btn btn--large btn--primary">Montar minha estrutura de clientes</a>
+                <a href="#contato" class="btn btn--large btn--primary">Quero começar agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section__title">Perguntas Frequentes</h2>
+            <div class="faq__list">
+                <div class="faq__item">
+                    <div class="faq__question">
+                        <h3>Quanto tempo até ver resultados?</h3>
+                        <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="faq__answer">
+                        <p>Primeiros contatos chegam em 30-45 dias. A estrutura completa fica operacional em 60-90 dias, dependendo da complexidade do seu negócio.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question">
+                        <h3>Funciona para qualquer tipo de negócio?</h3>
+                        <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="faq__answer">
+                        <p>Funcionamos principalmente com empresas B2B e B2C que têm ticket médio acima de R$ 500 e ciclo de venda de até 90 dias.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question">
+                        <h3>Como funciona o processo?</h3>
+                        <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="faq__answer">
+                        <p>Analisamos seu negócio, definimos a estrutura ideal, implementamos tráfego, páginas e automações, e você começa a receber contatos qualificados. Trabalhamos com implementação e acompanhamento contínuo.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question">
+                        <h3>Preciso ter estrutura pronta antes de começar?</h3>
+                        <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="faq__answer">
+                        <p>Não. Criamos a estrutura completa do zero. Você não precisa ter nada pronto. Implementamos tráfego, páginas, automações e tudo mais necessário para gerar clientes de forma previsível.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question">
+                        <h3>Como funciona o cancelamento?</h3>
+                        <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="faq__answer">
+                        <p>Você pode cancelar a qualquer momento, sem multas ou taxas. Basta avisar com 30 dias de antecedência. O cancelamento é simples e direto.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question">
+                        <h3>Vocês trabalham com empresas pequenas?</h3>
+                        <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="faq__answer">
+                        <p>Sim. Trabalhamos com empresas de diferentes portes. O importante é que você tenha capacidade de atender os clientes que vamos gerar e que seu ticket médio compense o investimento.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question">
+                        <h3>Qual o investimento necessário?</h3>
+                        <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="faq__answer">
+                        <p>O investimento inicial é de R$ 1.500/mês. Este valor inclui toda a estrutura: tráfego, páginas, automações e acompanhamento contínuo.</p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__question">
+                        <h3>Como é o atendimento?</h3>
+                        <svg class="faq__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="faq__answer">
+                        <p>Fale diretamente com um especialista pelo WhatsApp. Atendimento humano, sem robôs, sem spam. Resposta rápida. Sem apresentação engessada e sem compromisso na primeira conversa.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -428,13 +595,26 @@
         <div class="container">
             <div class="contact__content">
                 <h2 class="section__title">Seu negócio precisa gerar clientes todos os dias, não quando dá sorte.</h2>
+                <div class="contact__trust-badge">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/>
+                    </svg>
+                    <span>Estrutura testada e validada. Se não funcionar, ajustamos até funcionar.</span>
+                </div>
                 <p class="contact__description">
-                    Fale diretamente com um especialista da ProspectAds pelo WhatsApp.
-                    Em poucos minutos, você entende se faz sentido para seu negócio.
+                    Fale com um especialista pelo WhatsApp.
                     <br><br>
-                    Sem apresentação engessada. Sem compromisso.
+                    <strong>Investimento inicial: R$ 1.500/mês</strong>
+                    <br>
+                    <span class="contact__transparency">Sem taxas ocultas. Sem compromisso na primeira conversa.</span>
                 </p>
                 <div class="contact__cta">
+                    <p class="contact__urgency-text">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 16v2h2v-2h-2zm0-6v4h2v-4h-2z" fill="currentColor"/>
+                        </svg>
+                        <span>Restam apenas 3 vagas este mês. Garanta a sua agora.</span>
+                    </p>
                     <a href="https://wa.me/5519982459427?text=Olá!%20Quero%20entender%20como%20a%20ProspectAds%20pode%20estruturar%20a%20geração%20de%20clientes%20para%20minha%20empresa." 
                        class="btn btn--large btn--primary btn--whatsapp" 
                        target="_blank" 
@@ -466,7 +646,28 @@
                         </svg>
                         <h3 class="footer__brand-name">ProspectAds</h3>
                     </div>
-                    <p class="footer__tagline">Estrutura digital para geração de clientes</p>
+                    <p class="footer__tagline">Estrutura digital para geração de clientes. Tráfego, páginas e automação para empresas que precisam crescer.</p>
+                    <div class="footer__authority">
+                        <p class="footer__authority-text">5+ anos de experiência | +50 empresas atendidas | +5.000 leads gerados/mês</p>
+                    </div>
+                    <div class="footer__contact">
+                        <a href="https://wa.me/5519982459427?text=Olá!%20Quero%20entender%20como%20a%20ProspectAds%20pode%20estruturar%20a%20geração%20de%20clientes%20para%20minha%20empresa." 
+                           class="footer__contact-item" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onclick="if(typeof gtag !== 'undefined'){gtag('event', 'whatsapp_click', {});}">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="currentColor"/>
+                            </svg>
+                            <span>(19) 98245-9427</span>
+                        </a>
+                        <a href="mailto:contato@prospectads.com.br" class="footer__contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
+                            </svg>
+                            <span>contato@prospectads.com.br</span>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer__links">
                     <div class="footer__links-group">

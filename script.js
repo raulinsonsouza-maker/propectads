@@ -103,5 +103,28 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+// FAQ Accordion functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq__item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq__question');
+        if (question) {
+            question.addEventListener('click', function() {
+                const isActive = item.classList.contains('active');
+                
+                // Close all FAQ items
+                faqItems.forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    });
+});
+
 console.log('ProspectAds - Landing Page carregada com sucesso!');
 
