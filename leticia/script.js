@@ -14,11 +14,71 @@ const WHATSAPP_CONFIG = {
     }
 };
 
+// Google Ads - Conversão (Contato)
+const GOOGLE_ADS_CONVERSION = {
+    send_to: 'AW-17875991631/HJk0CO72keMbEM_498tC',
+    value: 1.0,
+    currency: 'BRL'
+};
+
 // Função para gerar link do WhatsApp
 function generateWhatsAppLink(messageType) {
     const message = WHATSAPP_CONFIG.messages[messageType] || WHATSAPP_CONFIG.messages.final;
     const encodedMessage = encodeURIComponent(message);
     return `https://wa.me/${WHATSAPP_CONFIG.number}?text=${encodedMessage}`;
+}
+
+function fireGoogleAdsConversion(callback) {
+    try {
+        if (typeof window.gtag !== 'function') {
+            if (typeof callback === 'function') callback();
+            return;
+        }
+
+        let called = false;
+        const safeCallback = () => {
+            if (called) return;
+            called = true;
+            if (typeof callback === 'function') callback();
+        };
+
+        window.gtag('event', 'conversion', {
+            send_to: GOOGLE_ADS_CONVERSION.send_to,
+            value: GOOGLE_ADS_CONVERSION.value,
+            currency: GOOGLE_ADS_CONVERSION.currency,
+            event_callback: safeCallback
+        });
+
+        // Fallback: não travar a navegação se o callback não disparar
+        setTimeout(safeCallback, 650);
+    } catch (e) {
+        if (typeof callback === 'function') callback();
+    }
+}
+
+function bindConversionToWhatsAppClicks() {
+    const clickTargets = document.querySelectorAll('[data-whatsapp], #whatsappFloat');
+
+    clickTargets.forEach((el) => {
+        el.addEventListener('click', (e) => {
+            const href = el.getAttribute('href');
+            if (!href) return;
+
+            // Garantir que não abra duas vezes (default + callback)
+            e.preventDefault();
+
+            // Abrir a aba imediatamente (para não ser bloqueado por popup blockers)
+            const newWin = window.open('', '_blank', 'noopener,noreferrer');
+
+            fireGoogleAdsConversion(() => {
+                if (newWin && !newWin.closed) {
+                    newWin.location.href = href;
+                } else {
+                    window.location.href = href;
+                }
+            });
+        }, { passive: false });
+    });
 }
 
 // Inicializar links do WhatsApp quando a página carregar
@@ -48,6 +108,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Scroll suave para links internos (se houver)
     initSmoothScroll();
+
+    // Conversão no clique (WhatsApp/Contato)
+    bindConversionToWhatsAppClicks();
 });
 
 // Função para animações de entrada ao fazer scroll
