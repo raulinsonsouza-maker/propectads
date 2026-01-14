@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Favicon - Letícia Galloni</title>
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            padding: 40px;
+            background: linear-gradient(135deg, #f8f5f0 0%, #faf7f2 100%);
+            text-align: center;
+        }
+        h1 {
+            color: #3d2e1f;
+            margin-bottom: 30px;
+        }
+        .favicon-preview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .favicon-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(157, 122, 90, 0.15);
+        }
+        .favicon-item h3 {
+            color: #9d7a5a;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        canvas {
+            border: 2px solid #e0d5c4;
+            border-radius: 8px;
+        }
+        .instructions {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 800px;
+            margin: 30px auto;
+            text-align: left;
+            box-shadow: 0 4px 15px rgba(157, 122, 90, 0.15);
+        }
+        .instructions h2 {
+            color: #9d7a5a;
+            margin-bottom: 15px;
+        }
+        .instructions ol {
+            color: #3d2e1f;
+            line-height: 1.8;
+        }
+        .instructions ol li {
+            margin-bottom: 10px;
+        }
+        .download-btn {
+            background: linear-gradient(135deg, #b8956f 0%, #9d7a5a 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 14px;
+            transition: transform 0.2s;
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(157, 122, 90, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>🎨 Gerador de Favicon - Clínica Letícia Galloni</h1>
+    
+    <div class="favicon-preview">
+        <div class="favicon-item">
+            <h3>16x16 pixels</h3>
+            <canvas id="canvas16" width="16" height="16"></canvas>
+            <button class="download-btn" onclick="downloadCanvas('canvas16', 'favicon-16x16.png')">⬇ Baixar</button>
+        </div>
+        
+        <div class="favicon-item">
+            <h3>32x32 pixels</h3>
+            <canvas id="canvas32" width="32" height="32"></canvas>
+            <button class="download-btn" onclick="downloadCanvas('canvas32', 'favicon-32x32.png')">⬇ Baixar</button>
+        </div>
+        
+        <div class="favicon-item">
+            <h3>180x180 pixels (Apple)</h3>
+            <canvas id="canvas180" width="180" height="180"></canvas>
+            <button class="download-btn" onclick="downloadCanvas('canvas180', 'apple-touch-icon.png')">⬇ Baixar</button>
+        </div>
+        
+        <div class="favicon-item">
+            <h3>192x192 pixels (Android)</h3>
+            <canvas id="canvas192" width="192" height="192"></canvas>
+            <button class="download-btn" onclick="downloadCanvas('canvas192', 'android-chrome-192x192.png')">⬇ Baixar</button>
+        </div>
+        
+        <div class="favicon-item">
+            <h3>512x512 pixels (Android)</h3>
+            <canvas id="canvas512" width="512" height="512"></canvas>
+            <button class="download-btn" onclick="downloadCanvas('canvas512', 'android-chrome-512x512.png')">⬇ Baixar</button>
+        </div>
+    </div>
+
+    <div class="instructions">
+        <h2>📋 Instruções:</h2>
+        <ol>
+            <li>Clique em cada botão "⬇ Baixar" para salvar os favicons</li>
+            <li>Você também precisará converter o maior (512x512) para <strong>favicon.ico</strong> usando: <a href="https://convertio.co/png-ico/" target="_blank" style="color: #9d7a5a;">https://convertio.co/png-ico/</a></li>
+            <li>Suba todos os arquivos para a raiz do seu site na VPS</li>
+            <li>Limpe o cache do navegador (Ctrl + Shift + Delete)</li>
+            <li>Acesse o site e o favicon estará funcionando! ✨</li>
+        </ol>
+    </div>
+
+    <script>
+        // Cores do site
+        const colors = {
+            primary: '#9d7a5a',
+            secondary: '#b8956f',
+            text: '#f8f5f0',
+            border: '#3d2e1f'
+        };
+
+        // Função para desenhar o favicon
+        function drawFavicon(canvas) {
+            const ctx = canvas.getContext('2d');
+            const size = canvas.width;
+            const center = size / 2;
+            const radius = (size / 2) - (size * 0.04); // 4% de margem
+
+            // Limpar canvas
+            ctx.clearRect(0, 0, size, size);
+
+            // Desenhar círculo com gradiente
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, colors.secondary);
+            gradient.addColorStop(1, colors.primary);
+
+            ctx.beginPath();
+            ctx.arc(center, center, radius, 0, Math.PI * 2);
+            ctx.fillStyle = gradient;
+            ctx.fill();
+
+            // Borda
+            ctx.strokeStyle = colors.border;
+            ctx.lineWidth = size * 0.02;
+            ctx.stroke();
+
+            // Texto "LG" - perfeitamente centralizado
+            ctx.fillStyle = colors.text;
+            const fontSize = size * 0.36; // Tamanho ajustado para melhor centralização
+            ctx.font = `bold ${fontSize}px Arial, sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            // Desenhar "LG" perfeitamente centralizado (canvas centraliza automaticamente com textAlign e textBaseline)
+            ctx.fillText('LG', center, center);
+        }
+
+        // Função para baixar o canvas como PNG
+        function downloadCanvas(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        // Desenhar todos os favicons ao carregar a página
+        window.onload = function() {
+            drawFavicon(document.getElementById('canvas16'));
+            drawFavicon(document.getElementById('canvas32'));
+            drawFavicon(document.getElementById('canvas180'));
+            drawFavicon(document.getElementById('canvas192'));
+            drawFavicon(document.getElementById('canvas512'));
+        };
+    </script>
+</body>
+</html>
+

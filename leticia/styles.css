@@ -79,7 +79,7 @@ body {
 /* Header */
 .header {
     background-color: var(--bg-white);
-    padding: 20px 0;
+    padding: 22px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -93,7 +93,17 @@ body {
     color: var(--primary-color);
     text-align: center;
     text-transform: uppercase;
-    opacity: 0.9;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.header-info {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 8px;
+    font-weight: 400;
+    line-height: 1.5;
 }
 
 /* Hero Section */
@@ -454,6 +464,32 @@ section:first-child::before {
     background-color: var(--bg-white);
 }
 
+/* Intro Section */
+.intro-section .section-intro {
+    margin-bottom: 30px;
+}
+
+.intro-question {
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.intro-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-conclusion {
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-top: 30px;
+    line-height: 1.8;
+}
+
 .section-intro {
     text-align: center;
     margin-bottom: 40px;
@@ -464,7 +500,7 @@ section:first-child::before {
 .section-subtitle {
     font-size: 18px;
     color: var(--text-light);
-    margin: 0 auto 35px;
+    margin: 0 auto 40px;
     max-width: 800px;
     text-align: center;
     line-height: 1.7;
@@ -626,6 +662,10 @@ section:first-child::before {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.turnaround-highlight {
+    margin-top: 20px;
+}
+
 .turnaround-description {
     font-size: 19px;
     margin: 30px 0;
@@ -754,6 +794,15 @@ section:first-child::before {
 .method-focus strong {
     color: var(--primary-color);
     font-weight: 700;
+}
+
+.method-list-items {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.method-description + .method-description {
+    margin-top: 20px;
 }
 
 /* Benefits Section */
@@ -1059,6 +1108,35 @@ section:first-child::before {
     max-width: 800px;
 }
 
+.evaluation-image-wrapper {
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 50px rgba(157, 122, 90, 0.25);
+}
+
+.evaluation-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.evaluation-how-title {
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-dark);
+    margin: 30px 0;
+    font-weight: 600;
+}
+
+.evaluation-features-text {
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-light);
+    margin-top: 40px;
+}
+
 
 /* For Who Section */
 .for-who-section {
@@ -1108,6 +1186,29 @@ section:first-child::before {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.for-who-note.not-for {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.for-who-note.not-for .icon {
+    width: 20px;
+    height: 20px;
+    color: var(--text-dark);
+    flex-shrink: 0;
+    margin-top: 2px;
+    margin-right: 0;
 }
 
 
@@ -1176,6 +1277,29 @@ section:first-child::before {
     object-fit: cover;
 }
 
+.about-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(61, 46, 31, 0.9) 0%, transparent 100%);
+    padding: 40px 25px 25px;
+    color: white;
+}
+
+.about-name {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.about-role {
+    font-size: 14px;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
 .about-content {
     text-align: left;
     max-width: 100%;
@@ -1201,15 +1325,20 @@ section:first-child::before {
 }
 
 .about-highlight {
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 600;
     color: var(--primary-color);
-    margin: 30px 0;
+    margin: 30px 0 0;
     padding: 25px;
-    background-color: var(--bg-white);
+    background-color: var(--highlight-bg);
     border-left: 4px solid var(--primary-color);
     border-radius: 8px;
     line-height: 1.6;
+    font-style: italic;
+}
+
+.about-description + .about-description {
+    margin-top: 20px;
 }
 
 .about-credentials {
@@ -1449,6 +1578,13 @@ section:first-child::before {
 .footer p {
     font-size: 14px;
     opacity: 0.9;
+    margin: 0;
+}
+
+.footer-address {
+    margin-top: 8px !important;
+    font-size: 13px !important;
+    opacity: 0.7 !important;
 }
 
 /* Botão Flutuante WhatsApp */
@@ -1639,8 +1775,14 @@ img {
     }
     
     .logo h1 {
-        font-size: 12px;
-        padding: 0 10px;
+        font-size: 13px;
+        letter-spacing: 0.8px;
+    }
+    
+    .header-info {
+        font-size: 11px;
+        margin-top: 6px;
+        line-height: 1.4;
     }
     
     .hero {
@@ -1893,9 +2035,42 @@ img {
     }
     
     .about-highlight {
-        font-size: 19px;
+        font-size: 16px;
         text-align: center;
         padding: 20px;
+    }
+    
+    .about-image-overlay {
+        padding: 30px 20px 20px;
+    }
+    
+    .about-name {
+        font-size: 18px;
+    }
+    
+    .about-role {
+        font-size: 13px;
+    }
+    
+    .intro-question,
+    .intro-conclusion {
+        font-size: 16px;
+    }
+    
+    .evaluation-image-wrapper {
+        margin: 30px auto;
+        border-radius: 16px;
+    }
+    
+    .evaluation-how-title {
+        font-size: 16px;
+        margin: 25px 0;
+    }
+    
+    .for-who-note.not-for {
+        flex-direction: row;
+        text-align: left;
+        font-size: 15px;
     }
     
     .about-content p {
