@@ -1,0 +1,9 @@
+﻿Coloque aqui os prints antes da call:
+
+screenshot-01-home.png          — Home
+screenshot-02-produto.png       — Página de produto
+screenshot-03-google-shopping.png — Google Shopping
+screenshot-04-depoimentos.png   — Depoimentos
+screenshot-05-instagram.png     — Instagram
+screenshot-06-whatsapp.png      — WhatsApp (opcional)
+logo.png                        — Logo Stresser (opcional)

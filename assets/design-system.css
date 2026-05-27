@@ -1,0 +1,815 @@
+/**
+ * ProspectAds — Design System (fonte única)
+ * Tokens, tipografia, botões, links, formulários, header, footer e blocos reutilizáveis.
+ * Carregue este arquivo ANTES de styles.css, blog.css ou ecommerce.css.
+ */
+
+/* ==========================================================================
+   1. Tokens
+   ========================================================================== */
+
+:root {
+    /* Marca */
+    --pa-primary: #f7a620;
+    --pa-primary-dark: #d68910;
+    --pa-primary-light: #f9b84d;
+    --pa-accent: #ff8c00;
+    --pa-gradient-start: #f7a620;
+    --pa-gradient-end: #d68910;
+    --pa-whatsapp: #25d366;
+
+    /* Texto */
+    --pa-text: #ffffff;
+    --pa-text-muted: #e0e0e0;
+    --pa-text-subtle: #b0b0b0;
+    --pa-text-on-primary: #ffffff;
+    --pa-logo-cream: #f5f5dc;
+
+    /* Fundos */
+    --pa-bg: #000000;
+    --pa-bg-elevated: #0f0f0f;
+    --pa-bg-surface: #1a1a1a;
+    --pa-bg-card: #1f1f1f;
+    --pa-border: #2a2a2a;
+
+    /* Tipografia */
+    --pa-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --pa-text-xs: 0.75rem;
+    --pa-text-sm: 0.875rem;
+    --pa-text-base: 1rem;
+    --pa-text-lg: 1.125rem;
+    --pa-text-xl: 1.25rem;
+    --pa-text-2xl: 1.5rem;
+    --pa-text-3xl: clamp(1.75rem, 4vw, 2.25rem);
+    --pa-text-4xl: clamp(2rem, 5vw, 3.25rem);
+    --pa-text-hero: clamp(2rem, 6vw, 3.5rem);
+    --pa-leading-tight: 1.15;
+    --pa-leading-normal: 1.6;
+
+    /* Espaçamento & forma */
+    --pa-radius-sm: 8px;
+    --pa-radius-md: 12px;
+    --pa-radius-lg: 16px;
+    --pa-radius-full: 999px;
+    --pa-container: 1200px;
+    --pa-header-h: 72px;
+    --pa-space-section: clamp(64px, 10vw, 96px);
+
+    /* Sombras & efeitos */
+    --pa-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+    --pa-shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --pa-shadow-gold: 0 4px 24px rgba(247, 166, 32, 0.2);
+    --pa-shadow-btn: 0 4px 12px rgba(247, 166, 32, 0.3);
+    --pa-glow-gold: rgba(247, 166, 32, 0.12);
+    --pa-transition: 0.2s ease;
+
+    /* Aliases legados (site / blog / LP) */
+    --primary-color: var(--pa-primary);
+    --primary-dark: var(--pa-primary-dark);
+    --primary-light: var(--pa-primary-light);
+    --secondary-color: #f7931e;
+    --accent-color: var(--pa-accent);
+    --text-dark: var(--pa-text);
+    --text-gray: var(--pa-text-muted);
+    --text-light: var(--pa-text-subtle);
+    --bg-dark: var(--pa-bg);
+    --bg-gray: var(--pa-bg-elevated);
+    --bg-white: var(--pa-bg-surface);
+    --bg-card: var(--pa-bg-card);
+    --border-color: var(--pa-border);
+    --gradient-start: var(--pa-gradient-start);
+    --gradient-end: var(--pa-gradient-end);
+    --shadow-sm: var(--pa-shadow-sm);
+    --shadow-md: var(--pa-shadow-md);
+    --shadow-lg: 0 10px 15px -3px rgba(247, 166, 32, 0.35);
+    --shadow-xl: 0 20px 25px -5px rgba(247, 166, 32, 0.4);
+}
+
+/* ==========================================================================
+   2. Base
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--pa-font);
+    font-size: var(--pa-text-base);
+    line-height: var(--pa-leading-normal);
+    color: var(--pa-text);
+    background-color: var(--pa-bg);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+.pa-page-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse 80% 50% at 50% -20%, var(--pa-glow-gold), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 100% 50%, rgba(247, 166, 32, 0.06), transparent 50%),
+        var(--pa-bg);
+}
+
+.container {
+    max-width: var(--pa-container);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+/* Âncoras com header fixo */
+[id] {
+    scroll-margin-top: calc(var(--pa-header-h) + 16px);
+}
+
+/* ==========================================================================
+   3. Tipografia
+   ========================================================================== */
+
+.pa-eyebrow,
+.blog-eyebrow,
+.ec-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--pa-text-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--pa-primary);
+    margin-bottom: 16px;
+    padding: 8px 14px;
+    border-radius: var(--pa-radius-full);
+    background: rgba(247, 166, 32, 0.1);
+    border: 1px solid rgba(247, 166, 32, 0.28);
+}
+
+.pa-eyebrow::before,
+.blog-eyebrow::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--pa-primary);
+    box-shadow: 0 0 8px var(--pa-primary);
+}
+
+.ec-label {
+    border-radius: 0;
+    border-left: 2px solid var(--pa-primary);
+    border-radius: 0 var(--pa-radius-sm) var(--pa-radius-sm) 0;
+}
+
+.section__title,
+.pa-title,
+.ecommerce-section__title {
+    font-size: var(--pa-text-3xl);
+    font-weight: 800;
+    line-height: var(--pa-leading-tight);
+    color: var(--pa-text);
+    letter-spacing: -0.02em;
+    margin: 0 0 16px;
+    text-align: center;
+}
+
+.pa-title--left,
+.section__title--left {
+    text-align: left;
+}
+
+.pa-subtitle,
+.section__subtitle {
+    font-size: var(--pa-text-lg);
+    color: var(--pa-text-muted);
+    max-width: 640px;
+    margin: 0 auto 32px;
+    text-align: center;
+    line-height: 1.55;
+}
+
+.pa-text-gradient,
+.hero__highlight,
+.ec-gradient-text {
+    background: linear-gradient(135deg, var(--pa-primary), var(--pa-primary-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+
+.pa-lead {
+    font-size: var(--pa-text-lg);
+    color: var(--pa-text-muted);
+    line-height: 1.55;
+}
+
+/* Links */
+a.pa-link,
+.link-primary {
+    color: var(--pa-primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color var(--pa-transition);
+}
+
+a.pa-link:hover,
+.link-primary:hover {
+    color: var(--pa-primary-light);
+    text-decoration: underline;
+}
+
+a.pa-link--muted {
+    color: var(--pa-text-subtle);
+    font-weight: 500;
+}
+
+a.pa-link--muted:hover {
+    color: var(--pa-primary);
+}
+
+/* ==========================================================================
+   4. Botões
+   ========================================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: var(--pa-radius-md);
+    font-weight: 600;
+    font-size: var(--pa-text-base);
+    font-family: inherit;
+    line-height: 1.5;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: transform var(--pa-transition), box-shadow var(--pa-transition), filter var(--pa-transition);
+}
+
+.btn--primary {
+    background: linear-gradient(135deg, var(--pa-gradient-start), var(--pa-gradient-end));
+    color: var(--pa-text-on-primary);
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--pa-shadow-btn);
+}
+
+.btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(247, 166, 32, 0.4);
+    filter: brightness(1.05);
+}
+
+.btn--secondary {
+    background: transparent;
+    color: var(--pa-text);
+    border: 1px solid var(--pa-border);
+    box-shadow: none;
+}
+
+.btn--secondary:hover {
+    border-color: rgba(247, 166, 32, 0.45);
+    color: var(--pa-primary-light);
+    transform: translateY(-1px);
+}
+
+.btn--large {
+    padding: 18px 36px;
+    font-size: var(--pa-text-lg);
+    border-radius: var(--pa-radius-lg);
+}
+
+.btn--header {
+    padding: 10px 18px;
+    font-size: var(--pa-text-sm);
+    border-radius: var(--pa-radius-sm);
+}
+
+.btn--whatsapp {
+    background: var(--pa-whatsapp);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+}
+
+.btn--whatsapp:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+}
+
+.btn--submit {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: var(--pa-text-base);
+    font-weight: 700;
+}
+
+.btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ==========================================================================
+   5. Header & navegação
+   ========================================================================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(26, 26, 26, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(247, 166, 32, 0.1);
+    box-shadow: var(--pa-shadow-sm);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    min-height: var(--pa-header-h);
+    gap: 16px;
+}
+
+.nav__logo a,
+.site-brand {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.site-brand__name,
+.logo__text {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--pa-logo-cream);
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+
+.logo__icon,
+.logo__tagline {
+    display: none !important;
+}
+
+.nav__menu {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__menu a:not(.btn) {
+    text-decoration: none;
+    color: var(--pa-text-muted);
+    font-weight: 500;
+    font-size: var(--pa-text-sm);
+    transition: color var(--pa-transition);
+}
+
+.nav__menu a:not(.btn):hover,
+.nav__menu a[aria-current="page"] {
+    color: var(--pa-primary);
+}
+
+/* ==========================================================================
+   6. Formulários
+   ========================================================================== */
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: var(--pa-text-sm);
+    font-weight: 500;
+    color: var(--pa-text-subtle);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+.lead-form input,
+.lead-form select,
+.lead-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: var(--pa-radius-sm);
+    border: 1px solid var(--pa-border);
+    background: var(--pa-bg-elevated);
+    color: var(--pa-text);
+    font-family: inherit;
+    font-size: var(--pa-text-sm);
+    transition: border-color var(--pa-transition), box-shadow var(--pa-transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.lead-form input:focus,
+.lead-form select:focus,
+.lead-form textarea:focus {
+    outline: none;
+    border-color: var(--pa-primary);
+    box-shadow: 0 0 0 3px rgba(247, 166, 32, 0.15);
+}
+
+.form-group input::placeholder,
+.lead-form input::placeholder {
+    color: var(--pa-text-subtle);
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   7. Cards & blocos
+   ========================================================================== */
+
+.pa-card {
+    background: var(--pa-bg-card);
+    border: 1px solid var(--pa-border);
+    border-radius: var(--pa-radius-md);
+    padding: 24px;
+    box-shadow: var(--pa-shadow-md);
+    transition: border-color var(--pa-transition), transform var(--pa-transition);
+}
+
+.pa-card:hover {
+    border-color: rgba(247, 166, 32, 0.25);
+}
+
+.pa-card-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+/* Faixa CTA (site, blog, LP) */
+.pa-cta-band {
+    padding: var(--pa-space-section) 0;
+    background:
+        linear-gradient(180deg, transparent, rgba(247, 166, 32, 0.06)),
+        var(--pa-bg-elevated);
+    border-top: 1px solid var(--pa-border);
+    border-bottom: 1px solid var(--pa-border);
+}
+
+.pa-cta-band__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    max-width: var(--pa-container);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.pa-cta-band h2 {
+    font-size: var(--pa-text-2xl);
+    font-weight: 800;
+    margin: 0 0 8px;
+    line-height: 1.2;
+}
+
+.pa-cta-band p {
+    margin: 0;
+    color: var(--pa-text-muted);
+    max-width: 520px;
+    font-size: var(--pa-text-base);
+}
+
+.pa-cta-band__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+/* Hub de conteúdo (blog → conversão) */
+.pa-content-hub {
+    padding: var(--pa-space-section) 0;
+    background: var(--pa-bg);
+}
+
+.pa-content-hub__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.pa-content-hub__topics {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.pa-topic-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 18px;
+    background: var(--pa-bg-card);
+    border: 1px solid var(--pa-border);
+    border-radius: var(--pa-radius-md);
+    text-decoration: none;
+    color: var(--pa-text);
+    font-weight: 600;
+    font-size: var(--pa-text-sm);
+    transition: border-color var(--pa-transition), background var(--pa-transition);
+}
+
+.pa-topic-link:hover {
+    border-color: rgba(247, 166, 32, 0.4);
+    background: rgba(247, 166, 32, 0.06);
+    color: var(--pa-primary-light);
+}
+
+.pa-topic-link svg {
+    flex-shrink: 0;
+    color: var(--pa-primary);
+}
+
+/* Badges */
+.status-badge,
+.pa-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: var(--pa-radius-full);
+    font-size: var(--pa-text-xs);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   8. Footer (site-wide)
+   ========================================================================== */
+
+.site-footer {
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    background: var(--pa-bg);
+    color: var(--pa-text-muted);
+}
+
+.site-footer__topline {
+    display: none;
+}
+
+.site-footer__inner {
+    padding: clamp(56px, 7vw, 76px) 0 clamp(28px, 3.5vw, 36px);
+}
+
+.site-footer__main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(48px, 9vw, 140px);
+    align-items: start;
+    justify-content: space-between;
+}
+
+.site-footer__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    max-width: 31rem;
+}
+
+.site-footer__logo {
+    display: inline-flex;
+    text-decoration: none;
+    color: var(--pa-text);
+    transition: color var(--pa-transition);
+}
+
+.site-footer__logo:hover {
+    color: var(--pa-primary);
+}
+
+.site-footer__logo-text {
+    font-size: clamp(1.35rem, 2.5vw, 1.6rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+}
+
+.site-footer__tagline {
+    margin: 0;
+    font-size: var(--pa-text-base);
+    line-height: 1.65;
+    color: var(--pa-text-muted);
+}
+
+.site-footer__col {
+    justify-self: end;
+    min-width: 260px;
+}
+
+.site-footer__heading {
+    margin: 0 0 18px;
+    font-size: var(--pa-text-xs);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--pa-text-subtle);
+    line-height: 1.2;
+}
+
+.site-footer__links,
+.site-footer__contacts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.site-footer__links a {
+    color: var(--pa-text-muted);
+    font-size: var(--pa-text-sm);
+    line-height: 1.6;
+    text-decoration: none;
+    transition: color var(--pa-transition);
+}
+
+.site-footer__links a:hover {
+    color: var(--pa-primary);
+}
+
+.site-footer__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-style: normal;
+}
+
+.site-footer__contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    font-size: var(--pa-text-sm);
+    line-height: 1.6;
+    color: var(--pa-text-muted);
+    text-decoration: none;
+    word-break: break-word;
+    transition: color var(--pa-transition);
+}
+
+.site-footer__contact-link svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: var(--pa-primary);
+}
+
+.site-footer__contact-link:hover {
+    color: var(--pa-primary);
+}
+
+.site-footer__bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 24px;
+    margin-top: clamp(42px, 5vw, 56px);
+    padding: 24px 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.site-footer__copy {
+    margin: 0;
+    font-size: var(--pa-text-sm);
+    color: var(--pa-text-subtle);
+    line-height: 1.5;
+}
+
+.site-footer__legal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    font-size: var(--pa-text-sm);
+}
+
+.site-footer__legal a {
+    color: var(--pa-text-muted);
+    text-decoration: none;
+    transition: color var(--pa-transition);
+}
+
+.site-footer__legal a:hover {
+    color: var(--pa-primary);
+}
+
+.site-footer__legal-sep {
+    color: var(--pa-text-subtle);
+    opacity: 0.6;
+    user-select: none;
+}
+
+@media (max-width: 900px) {
+    .site-footer__main {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .site-footer__brand {
+        max-width: none;
+    }
+
+    .site-footer__col {
+        justify-self: start;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .site-footer {
+        margin-top: 0;
+    }
+
+    .site-footer__main {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .site-footer__brand {
+        grid-column: auto;
+    }
+
+    .site-footer__bar {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .site-footer__inner {
+        padding-top: 44px;
+    }
+}
+
+/* ==========================================================================
+   9. Utilitários
+   ========================================================================== */
+
+.pa-text-center { text-align: center; }
+.pa-mb-0 { margin-bottom: 0; }
+.pa-mt-lg { margin-top: 32px; }
+
+@media (max-width: 768px) {
+    .nav__menu {
+        gap: 16px;
+    }
+
+    .nav__menu a:not(.btn) {
+        font-size: var(--pa-text-xs);
+    }
+
+    .pa-content-hub__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pa-cta-band__inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn--large {
+        width: 100%;
+    }
+}

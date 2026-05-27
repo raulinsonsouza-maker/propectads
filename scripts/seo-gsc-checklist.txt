@@ -1,0 +1,14 @@
+ProspectAds — checklist pós-deploy (Google Search Console)
+
+1. Verificar propriedade https://prospectads.com.br no Search Console
+2. Enviar sitemap: https://prospectads.com.br/sitemap.php (ou /sitemap.xml)
+3. Confirmar 301 das URLs antigas:
+   - /agencia-marketing-digital-americana/
+   - /agencia-marketing-digital-limeira/
+   - /agencia-marketing-digital-piracicaba/
+4. Se ainda indexadas: Remoções temporárias no GSC para essas URLs
+5. Inspecionar URL: home, /ecommerce-analise/, um artigo /blog/slug/
+6. Monitorar: Páginas indexadas, Experiência (Core Web Vitals mobile), HTTPS
+7. Confirmar www → non-www (ou único canonical) no servidor
+
+Escopo indexável: /, /ecommerce-analise/, /blog/, /blog/{slug}/, /blog/categoria/{slug}/

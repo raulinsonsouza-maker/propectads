@@ -1,0 +1,4 @@
+api/config.php
+data/*.sqlite
+data/rate-limit/*.json
+data/.installed

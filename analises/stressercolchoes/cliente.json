@@ -1,0 +1,141 @@
+﻿{
+  "empresa": "Stresser Colchões",
+  "slug": "stressercolchoes",
+  "site": "https://www.stressercolchoes.com.br/",
+  "logo": "assets/logo.png",
+  "analista": "Raul Souza",
+  "dataAnalise": "2026-05-27",
+  "expiresInDays": 20,
+  "potencialCrescimento": "Alto",
+  "compacto": true,
+  "resumoExecutivo": "A Stresser já tem base forte: catálogo, confiança e WhatsApp funcionando. O Google traz parte da demanda, mas ainda falta previsibilidade fora da busca ativa.",
+  "gapOportunidade": "Hoje vocês capturam parte da demanda no Google. O desafio é previsibilidade: depender apenas de quem já procura colchão limita crescimento. Falta fazer a marca aparecer também para quem ainda está decidindo.",
+  "operacaoHoje": [],
+  "scores": [
+    {
+      "pilar": "Google Shopping",
+      "maturidade": 35,
+      "insight": "Demanda validada no Google. Volume ainda enxuto para o tamanho do catálogo."
+    },
+    {
+      "pilar": "Instagram e Facebook",
+      "maturidade": 10,
+      "insight": "Presença nas redes, mas sem campanhas ativas estruturadas hoje.",
+      "destaqueHero": true
+    },
+    {
+      "pilar": "Catálogo no Instagram e Facebook",
+      "maturidade": 5,
+      "insight": "Produtos ainda não aparecem de forma estruturada em anúncios dinâmicos nessas redes.",
+      "destaqueHero": true
+    },
+    {
+      "pilar": "Conversão da loja",
+      "maturidade": 55,
+      "insight": "Base sólida de confiança. Margem de melhoria em home e páginas de produto."
+    },
+    {
+      "pilar": "Remarketing",
+      "maturidade": 5,
+      "insight": "Quem visita o site ou abandona carrinho ainda não é impactado por remarketing.",
+      "destaqueHero": true
+    },
+    {
+      "pilar": "Medição de resultados",
+      "maturidade": 40,
+      "insight": "Ainda falta clareza sobre de onde vêm as vendas e o que está funcionando."
+    }
+  ],
+  "vazamento": [],
+  "evidencias": [
+    {
+      "id": 1,
+      "titulo": "Google Shopping",
+      "screenshot": "assets/screenshot-03-google-shopping.png",
+      "observacao": "No Google, a Stresser já aparece para quem busca colchão. A demanda está validada. O próximo passo não é começar do zero: é ampliar o que já funciona, com mais produtos no ar e previsibilidade de resultado.",
+      "oportunidade": "Expandir Google Shopping e busca nos colchões que mais vendem, com investimento previsível e retorno mensurável.",
+      "impacto": "Mais compradores qualificados todo mês, partindo de uma base que já converte.",
+      "prioridade": "Alta"
+    },
+    {
+      "id": 2,
+      "titulo": "Instagram e Facebook",
+      "screenshot": "assets/screenshot-05-meta-ads.png",
+      "observacao": "No Instagram e Facebook, a Stresser ainda não veicula anúncios. Enquanto o Google traz quem já procura, essas plataformas ficam paradas na descoberta da marca e no remarketing. O catálogo de produtos nessas redes vem crescendo muito no varejo e combina com a loja de vocês.",
+      "oportunidade": "Conectar o catálogo ao Instagram e Facebook, com anúncios nos colchões campeões e remarketing para quem já visitou o site.",
+      "impacto": "Mais pessoas conhecendo a marca e voltando para comprar, além do que o Google sozinho entrega.",
+      "prioridade": "Alta"
+    },
+    {
+      "id": 3,
+      "titulo": "Página inicial",
+      "screenshot": "assets/screenshot-01-home.png",
+      "observacao": "A home transmite confiança: banner, frete grátis, parcelamento e loja física bem posicionados. Depois de estruturar mídia e remarketing, dá para extrair ainda mais da home com banner mais forte e mensagem mais direta.",
+      "oportunidade": "Refinar home e páginas de produto para converter melhor o tráfego que a mídia trouxer.",
+      "impacto": "Mais pedidos com o mesmo volume de visitas, sem depender só de mais anúncios.",
+      "prioridade": "Média"
+    }
+  ],
+  "oportunidades": [
+    {
+      "area": "Prioridade 1",
+      "titulo": "Compradores qualificados todo mês",
+      "descricao": "Ampliar Google Shopping e conectar o catálogo no Instagram e Facebook. Formato que costuma performar bem para e-commerce com catálogo amplo e ticket alto.",
+      "impacto": 5,
+      "prazo": "30 dias"
+    },
+    {
+      "area": "Prioridade 2",
+      "titulo": "Vender para quem já visitou e não comprou",
+      "descricao": "Remarketing no Instagram e Facebook para quem entrou no site, viu produto ou abandonou carrinho. Hoje nada disso está ativo.",
+      "impacto": 5,
+      "prazo": "30 dias"
+    },
+    {
+      "area": "Prioridade 3",
+      "titulo": "Conversão do site",
+      "descricao": "Ajustes na home e nas páginas de produto depois da mídia estruturada. Converter melhor quem já chega.",
+      "impacto": 4,
+      "prazo": "45 dias"
+    }
+  ],
+  "cenario": {
+    "visitantesMes": 8000,
+    "conversaoAtual": 0.5,
+    "conversaoAlvo": 0.8,
+    "ticketMedioMin": 3500,
+    "ticketMedioMax": 4500,
+    "simulacaoLabel": "Com ticket médio entre R$ 3.500 e R$ 4.500 por pedido",
+    "nota": "Exemplo ilustrativo: o que muda se a conversão subir, mantendo o mesmo volume de visitas. Refinamos com os números reais da operação de vocês.",
+    "disclaimerSimulacao": "Projeção para orientar a decisão. Visitas, conversão e ticket reais entram no planejamento junto com vocês."
+  },
+  "benchmark": [],
+  "roadmap": [
+    {
+      "mes": 1,
+      "titulo": "Atração",
+      "objetivo": "Trazer compradores qualificados",
+      "itens": ["Catálogo no Instagram e Facebook + Google Shopping", "Acompanhar resultados desde o início"],
+      "meta": "Fluxo previsível de visitas"
+    },
+    {
+      "mes": 2,
+      "titulo": "Remarketing",
+      "objetivo": "Vender para quem já visitou",
+      "itens": ["Remarketing no Instagram e Facebook", "Entender de onde vêm as vendas e o que converte"],
+      "meta": "Recuperar visitantes e carrinhos"
+    },
+    {
+      "mes": 3,
+      "titulo": "Conversão e escala",
+      "objetivo": "Vender mais e repetir o que funcionou",
+      "itens": ["Melhorias na home e páginas de produto", "Ampliar campanhas vencedoras"],
+      "meta": "Mais pedidos, mesmo investimento"
+    }
+  ],
+  "perguntasCall": [],
+  "cta": {
+    "whatsapp": "5519982459427",
+    "mensagem": "Olá! Vi a análise de crescimento da Stresser Colchões e gostaria de conversar sobre os próximos passos com a ProspectAds."
+  }
+}

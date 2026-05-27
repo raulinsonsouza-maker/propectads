@@ -1,4 +1,4 @@
-# Cache Control para arquivos estáticos
+﻿# Cache Control para arquivos estÃ¡ticos
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresByType text/css "access plus 1 year"
@@ -33,8 +33,41 @@
     </FilesMatch>
 </IfModule>
 
-# Compressão GZIP
+# CompressÃ£o GZIP
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
 </IfModule>
 
+# SEO â€” LPs locais removidas (implementaÃ§Ã£o antiga)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^agencia-marketing-digital-americana/?$ / [R=301,L]
+    RewriteRule ^agencia-marketing-digital-limeira/?$ / [R=301,L]
+    RewriteRule ^agencia-marketing-digital-piracicaba/?$ / [R=301,L]
+</IfModule>
+
+# Sitemap XML (alias)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^sitemap\.xml$ sitemap.php [L]
+</IfModule>
+
+# Blog â€” categorias e artigos (fallback se /blog/.htaccess nÃ£o aplicar)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^blog/categoria/([a-z0-9][a-z0-9-]*)/?$ blog/category.php?slug=$1 [L,QSA]
+    RewriteCond %{THE_REQUEST} \s/blog/post\.php[\s?] [NC]
+    RewriteCond %{QUERY_STRING} (^|&)slug=([a-z0-9][a-z0-9-]*)
+    RewriteRule ^blog/post\.php$ /blog/%2/ [R=301,L]
+    RewriteCond %{THE_REQUEST} \s/blog/category\.php[\s?] [NC]
+    RewriteCond %{QUERY_STRING} (^|&)slug=([a-z0-9][a-z0-9-]*)
+    RewriteRule ^blog/category\.php$ /blog/categoria/%2/ [R=301,L]
+    RewriteRule ^blog/([a-z0-9][a-z0-9-]+)/?$ blog/post.php?slug=$1 [L,QSA]
+</IfModule>
+
+# Análises de crescimento (privadas, noindex)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^analises/_template/ - [L]
+    RewriteRule ^analises/([a-z0-9][a-z0-9-]*)/?$ analises/_template/index.php?slug=$1 [L,QSA]
+</IfModule>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f0f0f"/>
+  <rect x="80" y="80" width="1040" height="470" rx="24" fill="none" stroke="#f7a620" stroke-width="2" opacity="0.2"/>
+  <text x="600" y="300" fill="#f7a620" font-family="Arial, Helvetica, sans-serif" font-size="120" font-weight="700" text-anchor="middle">ProspectAds</text>
+  <text x="600" y="390" fill="#e0e0e0" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="500" text-anchor="middle">Marketing para e-commerce</text>
+</svg>

@@ -1,0 +1,26 @@
+RewriteEngine On
+RewriteBase /blog/
+
+DirectoryIndex index.php
+
+# URLs legadas → post.php
+RewriteRule ^trafego-pago-ecommerce\.html$ post.php?slug=trafego-pago-ecommerce [L,QSA]
+RewriteRule ^melhorar-conversao-loja-online\.html$ post.php?slug=melhorar-conversao-loja-online [L,QSA]
+RewriteRule ^index\.html$ index.php [L]
+
+# Canonical SEO: só redireciona acesso direto a post.php?slug= (não o rewrite interno)
+RewriteCond %{THE_REQUEST} \s/blog/post\.php[\s?] [NC]
+RewriteCond %{QUERY_STRING} (^|&)slug=([a-z0-9][a-z0-9-]*)
+RewriteRule ^post\.php$ /blog/%2/ [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/blog/category\.php[\s?] [NC]
+RewriteCond %{QUERY_STRING} (^|&)slug=([a-z0-9][a-z0-9-]*)
+RewriteRule ^category\.php$ /blog/categoria/%2/ [R=301,L]
+
+# /blog/categoria/slug/ → category.php
+RewriteRule ^categoria/([a-z0-9][a-z0-9-]*)/?$ category.php?slug=$1 [L,QSA]
+
+# /blog/slug/ → post.php (rewrite interno, sem 301)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-z0-9][a-z0-9-]*)/?$ post.php?slug=$1 [L,QSA]
